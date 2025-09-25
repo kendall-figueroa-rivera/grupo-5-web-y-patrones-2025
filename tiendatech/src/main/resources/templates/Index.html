@@ -4,20 +4,163 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to c
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
 <html>
-    <head>
-        <title>TiendaTech</title>
-        <meta charset="UTF-8"/>
-    </head>
-    <body>
-    <header>
-        <h1>Ejemplo de index.html</h1>
-        </header>
-        <section>
-            <h2>Esta es la tienda en línea del curso</h2>
-              </section>
-        <footer>
-            Todos los Derechos Reservados TiendaTech 2025 &COPY;
-        </footer>
-     
-    </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TiendaTech</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif;
+      background: #0d1b2a; /* azul oscuro elegante */
+    }
+
+    /* ====== Lienzo centrado ====== */
+    .app {
+      max-width: 1080px;
+      margin: 24px auto 60px;
+      background: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    }
+
+    /* ====== Encabezado ====== */
+    .header {
+      background: #1b263b; /* azul más sobrio */
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 18px;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: .2px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      appearance: none;
+      border: 0;
+      outline: 0;
+      cursor: pointer;
+      background: #2d6a4f; /* verde calmado */
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 12px;
+      font-size: 14px;
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,.15);
+      transition: background 0.2s ease-in-out;
+    }
+
+    .btn:hover {
+      background: #1b4332; /* verde más oscuro al pasar el mouse */
+    }
+
+    /* ====== Cuerpo con sidebar + contenido ====== */
+    .layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      min-height: 64vh;
+    }
+
+    .sidebar {
+      background: #e0e1dd; /* gris claro neutro */
+      padding: 16px;
+    }
+
+    .content {
+      background: #778da9; /* azul grisáceo suave */
+      color: #f8f9fa; /* texto claro */
+      padding: 16px 20px;
+    }
+
+    /* ====== Footer ====== */
+    .footer {
+      background: #111;
+      color: #d9d9d9;
+      font-size: 12px;
+      text-align: center;
+      padding: 8px 12px;
+    }
+
+    /* ====== Badge flotante ====== */
+    .badge {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #415a77; /* azul gris más fuerte */
+      color: #fff;
+      display: grid;
+      place-content: center;
+      font-weight: 700;
+      box-shadow: 0 8px 20px rgba(0,0,0,.25);
+      user-select: none;
+    }
+
+    /* ====== Responsivo ====== */
+    @media (max-width: 800px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        order: 2;
+      }
+      .content {
+        order: 1;
+      }
+      .nav {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="brand">TinedaTech</div>
+      <nav class="nav">
+        <button class="btn" onclick="alert('Sección Mis Autos');">Mis Autos</button>
+        <button class="btn" onclick="alert('Sección Multimedia');">Multimedia</button>
+        <button class="btn" onclick="alert('Sección iFrames');">iFrames</button>
+      </nav>
+    </header>
+
+    <!-- Layout principal -->
+    <main class="layout">
+      <aside class="sidebar">
+        <h3>Menú</h3>
+        <ul>
+          <li>Inicio</li>
+          <li>Catálogo</li>
+          <li>Promociones</li>
+          <li>Contacto</li>
+        </ul>
+      </aside>
+      <section class="content">
+        <h3>Esta es la tienda en línea del curso</h3>
+        <p></p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      Todos los Derechos Reservados TiendaTech 2025 ©
+    </footer>
+  </div>
+</body>
 </html>
